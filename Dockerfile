@@ -5,6 +5,7 @@ RUN apk add --no-cache bash
 
 # copy our own entrypoints because Dokku doesn't support '&&' in the Procfile
 COPY entrypoints/* entrypoints/
+COPY app.json .
 COPY Procfile .
 
 # Default web command for Dokku/docker-local when Procfile is not detected.
