@@ -20,7 +20,7 @@ dokku postgres:link "$APP_NAME"-db "$APP_NAME" --no-restart
 
 # Config: review these
 dokku config:set --no-restart "$APP_NAME" \
-    LISTMONK_app__address="https://listmonk.example.com" \
+    LISTMONK_app__address="0.0.0.0:9000" \
     LISTMONK_db__host="db" \
     LISTMONK_db__port="5432" \
     LISTMONK_db__user="postgres" \
