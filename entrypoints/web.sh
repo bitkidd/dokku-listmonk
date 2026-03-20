@@ -1,2 +1,4 @@
-#! /bin/sh
+#!/bin/sh
+set -e
+
 ./listmonk --config ''

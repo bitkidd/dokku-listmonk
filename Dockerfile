@@ -7,6 +7,5 @@ RUN apk add --no-cache bash
 COPY entrypoints/* entrypoints/
 COPY Procfile .
 
-# Override the upstream entrypoint so Dokku can execute Procfile commands
-# as shell scripts for release/web processes.
-ENTRYPOINT ["/bin/sh"]
+# Default web command for Dokku/docker-local when Procfile is not detected.
+CMD ["./entrypoints/web.sh"]

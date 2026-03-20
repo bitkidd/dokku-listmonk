@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dokku": {
+      "predeploy": "./entrypoints/release.sh"
+    }
+  }
+}
