@@ -8,5 +8,5 @@ COPY entrypoints/* entrypoints/
 COPY Procfile .
 
 # Override the upstream entrypoint so Dokku can execute Procfile commands
-# directly for release/web processes.
-ENTRYPOINT ["/bin/sh", "-lc"]
+# as shell scripts for release/web processes.
+ENTRYPOINT ["/bin/sh"]
